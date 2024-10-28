@@ -3,20 +3,16 @@ import { useState, useEffect } from "react";
 import{StepperContext} from "./contexts/StepperContext";
 import Stepper from "./components/Stepper";
 import Steppercontrol from "./components/Steppercontrol";
-
-
-
-
 import Account from "./components/steps/Account";
 import Details from "./components/steps/Details";
 import Final from "./components/steps/final";
 
-// import Payment from "./components/steps/Payment";
+// // import Payment from "./components/steps/Payment";
 
-import fetch from 'node-fetch';
-import mongoose from 'mongoose';
+// import fetch from 'node-fetch';
+// import mongoose from 'mongoose';
 
-mongoose.connect()
+// mongoose.connect()
 
 function App(){
   const [currentStep, setCurrentStep] = useState(1);
@@ -30,20 +26,20 @@ function App(){
 
 
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
- // Replace with your API URL
-        const data = await response.json();
-        console.log(data); // Use the fetched data as needed
-        setUserData(data); // Assuming data should be set in userData
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-    fetchData();
-  }, []);
+//   useEffect(() => {
+//     async function fetchData() {
+//       try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+//  // Replace with your API URL
+//         const data = await response.json();
+//         console.log(data); // Use the fetched data as needed
+//         setUserData(data); // Assuming data should be set in userData
+//       } catch (error) {
+//         console.error("Error fetching data:", error);
+//       }
+//     }
+//     fetchData();
+//   }, []);
 
 
 

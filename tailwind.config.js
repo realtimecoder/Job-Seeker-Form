@@ -1,14 +1,24 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
+    "./src/**/*.{html,js,jsx,ts,tsx}", // Adjust this path to match where your source files are located
+    "./public/index.html"              // Include any other paths where you might use Tailwind classes
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      abc:['Alegreya Sans SC',"static"]
-    }
+    extend: {
+      colors: {
+        // Add custom colors if needed
+        customYellow: '#fdfd96',
+      },
+      spacing: {
+        // Add custom spacing if needed
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      }
+    },
   },
-  plugins: [],
-  darkMode: 'class', // Enables dark mode based on a class
+  plugins: [
+    // Add plugins here if you need additional functionality
+  ],
 };
